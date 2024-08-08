@@ -83,4 +83,6 @@ echo "<p>Other roperators </p>";
     <li>;</li>
     <li>()</li>
 </lo>
-    <a href="https://www.php.net/manual/en/language.operators.arithmetic.php">Read More</a>
+    <p>Read More</p>
+   https://www.php.net/manual/en/language.operators.arithmetic.php
+    <br>
