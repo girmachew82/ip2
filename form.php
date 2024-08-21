@@ -47,5 +47,6 @@
         </table>
 
     </form>
+        <a href="orders.php">All</a>
 </body>
 </html>
