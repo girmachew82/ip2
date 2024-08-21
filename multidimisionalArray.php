@@ -1,4 +1,5 @@
 <?php
+require 'nav.php';
 $books = [
             [
                 "title"=>"PHP",

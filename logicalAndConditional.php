@@ -1,6 +1,7 @@
 <?php
+require 'nav.php';
 $mark = 90;
-if($mark >= 0 && $mark <= 39)
+if($mark >= 0 && $mark <= 39 )
     $grade = "F";
 elseif($mark >= 40 && $mark < 45)
     $grade = "D";

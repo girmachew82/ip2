@@ -1,5 +1,5 @@
 <?php
-
+require 'nav.php';
 $computer = [
             "brand" => "HP",
             "manufacturedDate" => 2024,
@@ -11,7 +11,7 @@ $computer = [
 <h1>Computer detail</h1>
 <p> Brand : <?php echo $computer['brand']?></p>
 <p> Manufacture Date : <?php echo $computer['manufacturedDate']?> E.T</p>
-<p> Price : <?php echo number_format($computer['price'],2)?> Birr</p>
+<p> Price : <?php echo number_format($computer['price'])?> Birr</p>
 <p> OS : <?php echo $computer['os']?></p>
 <p> AntiVirus is installed : <?php echo var_export($computer['antivirus'])?> </p>
 <?php

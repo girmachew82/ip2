@@ -1,6 +1,11 @@
 <?php
+require_once ('nav.php');
 //option one using array()
 $numbers = array(7,8,9,4,5,6,1);//one-dimisional + indexed 
+$sorted  = rsort($numbers);
+foreach($numbers as $number){
+    echo $number."<br>";
+}
 //The sum of the first two elements 
 $sum = $numbers[0] + $numbers[1] + $numbers[2] + $numbers[3]+ $numbers[4] + $numbers[5] + $numbers[6];
 echo "$numbers[0] + $numbers[1] = ". $numbers[0] + $numbers[1]."<br>";
@@ -16,6 +21,8 @@ $number7 =1 ;
 */
 //option two using []
 $students  = ["Abebe","Alemaz","Kebede"];
+
+   echo "The first book ".$books["one"];
 $x = 9;
 echo "Value of x = ".$x;
 echo"<br>";
@@ -36,8 +43,7 @@ echo "<hr>";
 for($i = 0; $i < count($numbers); $i++){
         if($i < 3 )
           $sum += $numbers[$i];
-        else
-        break;
+         break;
 }
 echo "<p>The result of <em>the first three elements</em> </p>";
 echo "Sum = ".$sum."<br>";
@@ -54,7 +60,7 @@ echo "Sum = ".$sum."<br>";
 echo "<hr>";
 $sum = 0;
 foreach($numbers as $number)
-$sum += $number;
+    $sum += $number;
 
 echo "<p>The result of <em>foreach</em> </p>";
 echo "Sum = ".$sum."<br>";
@@ -76,3 +82,6 @@ do{
 echo"<hr>";
 echo "<p>The result of <em>do -while</em> </p>";
 echo "Sum = ".$sum."<br>";
+
+?>
+https://www.php.net/manual/en/ref.array.php

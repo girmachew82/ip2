@@ -1,4 +1,5 @@
 <?php
+require 'nav.php';
 $tilte  ="we are practicing about PHP built-in methods";
 echo strtoupper($tilte)."<br>";
 $x  = 1;

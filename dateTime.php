@@ -1,4 +1,5 @@
 <?php
+require 'nav.php';
 $date =  date('Y/M/D');
 echo "Date is ".$date;
 echo "Time ".time();
