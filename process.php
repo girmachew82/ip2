@@ -9,6 +9,7 @@ w+ 	Open a file for read/write. Erases the contents of the file or creates a new
 a+ 	Open a file for read/write. The existing data in file is preserved. File pointer starts at the end of the file. Creates a new file if the file doesn't exist
 x+ 	Creates a new file for read/write. Returns FALSE and an error if file already exists
 */
+if($_SERVER['REQUEST_METHOD'] ==='POST'){
 define('TIREPRICE',100);
 define('OILPRICE', 10);
 define('SPARKPRICE', 4);
@@ -75,4 +76,8 @@ $outputsting =  $date."\t".$tires." tires \t".$oil." oil\t"
 .$spark." spark plugs\t\$".$totalamount
 ."\t". $address."\t".$howufind."\n";
 fwrite($fp, $outputsting);
+header('location:form.php');
 fclose($fp);
+}else{
+      header('location:form.php');
+}
