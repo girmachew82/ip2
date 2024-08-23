@@ -15,23 +15,24 @@ $dbname = "ip2";
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
         if(($_SERVER['REQUEST_METHOD']) === 'POST'){
-            $data =  $_POST['comment'];
-            $sql  = "INSERT INTO `comment`(`comment`) VALUES ('$data')";
-            //echo "$sql";
-            if ($conn->query($sql) === TRUE) {
-                echo "Comment saved successfully";
+            $data =  htmlspecialchars($_POST['comment']);
+            $sql  = " SELECT * FROM `comment` WHERE comment LIKE '%$data%'; ";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+                    echo $row['comment']."<br>";
+                }
             } else {
-                echo "Error creating database: " . $conn->error;
+                echo "Error creating database";
             }
         }
 
     ?>
-    <form action="insert.php" method="post" enctype="multipart/form-data">
+    <form action="" method="post" enctype="multipart/form-data">
         <textarea name="comment" id=""></textarea>
         <br>
-        <input type='file'>
-        <br>
-        <button type="submit">Save</button>
+
+        <button type="submit">Search</button>
     </form>
 </body>
 </html>
