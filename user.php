@@ -1,3 +1,8 @@
+<?php
+session_start();
+if($_SESSION['role_id'] == 7){
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +11,7 @@
     <title>User</title>
 </head>
 <body>
+<?php require 'admin_nav.php'?>
     <a href="newUser.php">New User</a> | <a href ="searchUserForm.php">Search</a>
     <table border=2>
         <thead>
@@ -51,3 +57,8 @@ $select = $conn->query($select);
     </table>
 </body>
 </html>
+<?php
+}else{
+    header("location:/ipII/login.view.php");
+    exit();
+}

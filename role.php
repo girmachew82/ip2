@@ -6,6 +6,7 @@
     <title>Role</title>
 </head>
 <body>
+<?php require 'admin_nav.php'?>
 <a href="SaveRole.php">New Role</a>
 <table border=2> 
     <thead>

@@ -8,7 +8,7 @@
 <body>
     <form action="insertUser.php" method="post">
         <label for="fname">First name</label>
-<input type="text" name="fname" id="" placeholder="Enter first name" required title="first name must be character"  pattern [a-zA-Z]>
+<input type="text" name="fname" id="" placeholder="Enter first name" required title="first name must be character"  >
 <br>
 <label for="ffname">Father name</label>
 <input type="text" name="ffname" id="" required>

@@ -25,6 +25,9 @@
         <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link " href="login.view.php" tabindex="-1" >Login</a>
+        </li>
       </ul>
     </div>
   </div>
